@@ -1,30 +1,30 @@
 import axiosClient from './axiosClient'
 
-const postApi = {
+const cityAPI = {
   getAll(params) {
-    const url = '/posts'
+    const url = '/cities'
     return axiosClient.get(url, { params })
   },
 
   getById(id) {
-    const url = `/posts/${id}`
+    const url = `/cities/${id}`
     return axiosClient.get(url)
   },
 
   add(data) {
-    const url = `/posts`
+    const url = `/cities`
     return axiosClient.post(url, data)
   },
 
   update(data) {
-    const url = `/posts/${data.id}`
+    const url = `/cities/${data.id}`
     return axiosClient.patch(url, data)
   },
 
   remove(id) {
-    const url = `/posts/${id}`
+    const url = `/cities/${id}`
     return axiosClient.patch(url)
   },
 }
 
-export default postApi
+export default cityAPI
