@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import postApi from './api/postApi'
+import postApi from './api/postApii'
 import { setTextContent } from './utils'
 
 // id="goToEditPageLink"
