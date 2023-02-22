@@ -1,4 +1,4 @@
-import postApi from './api/postAPI'
+import postApi from './api/postApi'
 import { initPagination, initSearch, renderPagination, renderPostList } from './utils'
 
 async function handleFilterChange(filterName, filterValue) {
