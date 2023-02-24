@@ -21,7 +21,6 @@ function getFormValues(form) {
   // S2: using form data
   const data = new FormData(form)
   for (const [key, value] of data) {
-    console.log('🏆 ~ getFormValues ~ ', key, value)
     formValues[key] = value
   }
 
