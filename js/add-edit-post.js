@@ -1,4 +1,5 @@
 import postApi from './api/postApi'
+import { initPostForm } from './utils'
 
 // MAIN
 ;(async () => {
@@ -17,7 +18,11 @@ import postApi from './api/postApi'
       defaultValues = await postApi.getById(postId)
     }
 
-    console.log('add edit page', postId)
+    initPostForm({
+      formId: 'postForm',
+      defaultValues,
+      onSubmit: (formValues) => console.log('submit', formValues),
+    })
   } catch (error) {
     console.log('🏆 ~ failed to fetch post detail', error)
   }
